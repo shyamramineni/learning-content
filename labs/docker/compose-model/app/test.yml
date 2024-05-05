@@ -1,0 +1,16 @@
+services:
+  random-api:
+    ports:
+      - "8289:80"
+
+  random-ui:
+    ports:
+      - "8290:80"
+
+secrets:
+  dotnet-logging:
+    file: ./config/test/logging.json
+  random-api:
+    file: ./config/test/api/override.json
+  random-ui:
+    file: ./config/test/web/override.json

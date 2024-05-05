@@ -1,0 +1,23 @@
+services:
+  customers-db:
+    image: thecodecamp/customers-db:latest
+    networks:
+      - banking-net
+
+  api-server:
+    image: thecodecamp/banking-api:latest
+    networks:
+      - banking-net
+    environment:
+      - AUTH_ENABLED=0
+    restart: always
+
+  banking-ui:
+    image: thecodecamp/banking-ui:latest
+    ports:
+      - "8082:80"
+    networks:
+      - banking-net
+
+networks:
+  banking-net:

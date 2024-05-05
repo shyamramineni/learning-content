@@ -1,0 +1,22 @@
+services:
+  random-api:
+    image: thecodecamp/random-api:latest
+    environment:
+      - Logging__LogLevel__Default=Debug
+    ports:
+      - "8089:80"
+    networks:
+      - app-net
+
+  random-ui:
+    image: thecodecamp/random-ui:latest
+    environment:
+      - Logging__LogLevel__Default=Debug
+      - RngApi__Url=http://random-api/rng
+    ports:
+      - "8090:80"
+    networks:
+      - app-net
+
+networks:
+  app-net:

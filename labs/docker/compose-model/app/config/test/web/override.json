@@ -1,0 +1,5 @@
+{
+    "RngApi" : {
+      "Url" : "http://random-api/rng" 
+    }
+}
