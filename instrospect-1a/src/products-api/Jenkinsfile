@@ -1,0 +1,35 @@
+pipeline {
+  agent any
+  stages {
+    stage('Audit tools') {                        
+      steps {
+        sh 'javac -version'
+      }
+    }
+    stage('Build') {
+      steps {
+        echo "Building Java app"
+        dir ('project/products-api') {
+          sh '''
+            ./build.sh
+          '''
+        }
+      }
+    }
+    stage('Test') {
+      steps {
+        echo "Running Java app"
+        dir ('project/products-api/target') {
+          sh '''
+            ls *.*
+          '''
+        }
+      }
+    }
+  }
+  post {
+    success {
+      echo "Build finished successfully"
+    }
+  }
+}
