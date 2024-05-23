@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp-deployment
+  labels:
+    k8s.course.label: deployments
+    app: webapp
+spec:
+  replicas: 6
+  selector:
+    matchLabels:
+      app: webapp
+  template:
+    metadata:
+      labels:
+        app: webapp
+    spec:
+      containers:
+        - name: webapp
+          image: httpd
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: webapp-np
+  labels:
+    k8s.course.label: deployments
+    app: webapp
+spec:
+  selector:
+    app: webapp
+  ports:
+    - name: http
+      port: 8010
+      targetPort: 80
+      nodePort: 30010
+  type: NodePort
