@@ -239,13 +239,20 @@ kubectl exec my-utils -- curl -s http://whoami-np:8010
 
 Now you can call the whoami app from your local machine:
 
-```
+```bash
 # either
 curl http://localhost:8080
 
 # or
 curl http://localhost:30010
 ```
+> If you are using minikube, use the below command to to return a URL to connect to a service. This command returns the Kubernetes URL(s) for service(s) in your local cluster.
+
+```bash
+# minikube service <service-name>
+minikube service whoami-np
+```
+
 
 > If your cluster isn't running locally, use the node's IP address for NodePort access or the EXTERNAL-IP address field for the LoadBalancer
 
