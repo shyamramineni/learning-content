@@ -18,7 +18,7 @@ Browse back to Jenkins at http://localhost:8080/view/all/newJob to create a new 
 
 Update the script path to point to the new manual-gate pipeline. Scroll to the _Pipeline_ section:
 
-- change the _Script Path_ to `labs/manual-gate/pipeline/Jenkinsfile`
+- change the _Script Path_ to `labs/devsecops/manual-gate/pipeline/Jenkinsfile`
 
 Save and run the build. An interesting point is the _Deploy_ stage which used an `input` block to ask a user for confirmation.
 

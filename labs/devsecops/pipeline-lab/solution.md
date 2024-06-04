@@ -15,7 +15,7 @@ In the build definintion, scroll to _Build triggers_ and select _Poll SCM_. That
 
 > This means Jenkins will check the Git repo every minute, and if there have been any changes since the last build then a new one is triggered.
 
-Change the script path to `labs/pipeline-lab/hello-world/Jenkinsfile`, then save and build the job - it fails.
+Change the script path to `labs/devsecops/pipeline-lab/hello-world/Jenkinsfile`, then save and build the job - it fails.
 
 Check the logs or the console output - the _Test_ stage fails with this log line:
 
@@ -23,7 +23,7 @@ _Error: Could not find or load main class HelloWorkd.java_
 
 `HelloWorkd`> Looks like a typo :)
 
-Change the line `java HelloWorkd` in the Jenkinsfile to `java HelloWorld` in the file `labs/pipeline-lab/hello-world/Jenkinsfile`. My fixes are in [this Jenkinsfile](./lab/Jenkinsfile)
+Change the line `java HelloWorkd` in the Jenkinsfile to `java HelloWorld` in the file `labs/devsecops/pipeline-lab/hello-world/Jenkinsfile`. My fixes are in [this Jenkinsfile](./lab/Jenkinsfile)
 
 Then commit and push your changes. Back in Jenkins, wait for the build to trigger from the SCM change (or click _Build Now_). 
 

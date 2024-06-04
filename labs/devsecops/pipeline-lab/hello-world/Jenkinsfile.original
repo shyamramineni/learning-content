@@ -12,7 +12,7 @@ pipeline {
         stage('Build') {
             steps {
               echo "Building Java app"
-              dir ('labs/pipeline-lab/hello-world') {
+              dir ('labs/devsecops/pipeline-lab/hello-world') {
                 sh '''
                   mkdir -p out/bin
                   javac -d out/bin src/HelloWorld.java
@@ -23,7 +23,7 @@ pipeline {
         stage('Test') {
           steps {
               echo "Running Java app"
-              dir ('labs/pipeline-lab/hello-world/out/bin') {
+              dir ('labs/devsecops/pipeline-lab/hello-world/out/bin') {
                 sh '''
                   ls *.class
                   java HelloWorkd
@@ -34,7 +34,7 @@ pipeline {
     }
    post {
       success {
-         archiveArtifacts 'labs/pipeline-lab/hello-world/out/bin/HelloWorld.class'
+         archiveArtifacts 'labs/devsecops/pipeline-lab/hello-world/out/bin/HelloWorld.class'
       }
    }
 }

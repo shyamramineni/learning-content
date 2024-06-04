@@ -44,7 +44,7 @@ Let's setup Webhook configuration between Jenkins and Gogs.
 
 Run the below commands to make a commit and push to devops repository:
 ```
-git add labs/pipeline-lab/hello-world/src/HelloWorld.java
+git add labs/devsecops/pipeline-lab/hello-world/src/HelloWorld.java
 git commit -m 'Checking automated build'
 git push gogs
 ```

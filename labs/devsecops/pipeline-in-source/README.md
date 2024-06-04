@@ -42,7 +42,7 @@ This is the classic UI - you can still use it to work with new pipelines. Scroll
 - set the SCM to _Git_
 - set the _Repository URL_ to `http://gogs:3000/courselabs/jenkins-fundamentals.git`
 - change the _Branch Specifier_ from `*/master` to `*/main`
-- set the _Script Path_ to `labs/pipeline-in-source/pipeline/Jenkinsfile`
+- set the _Script Path_ to `labs/devsecops/pipeline-in-source/pipeline/Jenkinsfile`
 
 Save and run the build. The build will be successful, you can check the build history and logs.
 
