@@ -9,10 +9,6 @@
 1. [Manual gate](./manual-gate/)
 1. [Pipeline](./pipeline-lab/)
 1. [Build on commit](./build-on-commit/)
-1. [Agent](./agent/)
-1. [Agent pipeline](./agent-pipeline/)
 1. [Version archive](./version-archive/)
 1. [Publish](./publish/)
 1. [Coverage](./coverage/)
-
-
