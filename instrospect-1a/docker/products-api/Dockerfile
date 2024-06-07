@@ -17,3 +17,11 @@
 
 # The startup command needs to run the JAR file from the build:
 #  java -jar products-api-0.1.0.jar
+
+FROM openjdk:17-jdk-alpine
+EXPOSE 8080
+COPY products-api-0.1.0.jar products-api-0.1.0.jar
+ENTRYPOINT ["java","-jar","/products-api-0.1.0.jar"]
+
+
+#https://www.baeldung.com/dockerizing-spring-boot-application
