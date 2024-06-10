@@ -1,0 +1,15 @@
+services:
+  products-db:
+    image: shyam/db:latest
+    networks:
+      - products-net
+
+  api-server:
+    image: products-api:latest
+    networks:
+      - products-net
+    ports:
+      - "8082:80"
+
+networks:
+  products-net:
